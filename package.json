@@ -29,5 +29,9 @@
     "eslint-plugin-vue": "^5.0.0",
     "global": "^4.4.0",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/okall2000/vf2.git",
+  "author": "okall <okall@naver.com>",
+  "license": "MIT"
 }
