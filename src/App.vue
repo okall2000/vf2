@@ -10,6 +10,10 @@
     <site-title :title="title"></site-title>
     <v-spacer></v-spacer>
 
+    <v-btn icon @click="save">
+      <v-icon>mdi-check</v-icon>
+    </v-btn>
+
     <v-btn icon to='/'>
         <v-icon>mdi-home</v-icon>
     </v-btn>
@@ -24,9 +28,9 @@
     <site-menu></site-menu>
     </v-navigation-drawer>
 
-    <v-content>
+    <v-main>
       <router-view></router-view>
-    </v-content>
+    </v-main>
 
     <site-footer :footer="footer"></site-footer>
 
@@ -50,6 +54,19 @@ export default {
     }
   },
   mounted () {
+    console.log(this.$firebase)
+  },
+  methods: {
+    save () {
+      console.log('save@@@')
+      console.log(this.set(ref($firebase, 'users/' + 'okall'),
+        {
+          username: 'OK',
+          email: 'pkall@naver.com',
+          profile_picture: 'mdi-check'
+        }
+      ))
+    }
   }
 }
 </script>

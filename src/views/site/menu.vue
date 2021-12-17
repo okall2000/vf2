@@ -1,5 +1,5 @@
 <template>
-  <v-div>
+  <v-divider>
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="text-h6">
@@ -38,8 +38,7 @@
         </v-list-item>
       </v-list-group>
     </v-list>
-
-  </v-div>
+  </v-divider>
 </template>
 
 <script>
