@@ -58,14 +58,14 @@ export default {
   },
   methods: {
     save () {
-      console.log('save@@@')
-      console.log(this.set(ref($firebase, 'users/' + 'okall'),
-        {
-          username: 'OK',
-          email: 'pkall@naver.com',
-          profile_picture: 'mdi-check'
-        }
-      ))
+      console.log(this.$firebase.getDatabas())
+    //   console.log(this.$$firebase.getDatabase().ref('/board').child('okall').set(
+    //     {
+    //       title: 'this is title',
+    //       content: 'hello world'
+    //     }
+    //   )
+    //   )
     }
   }
 }
